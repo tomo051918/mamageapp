@@ -22,7 +22,7 @@ public class LoginUserDao {
 	 */
 	public LoginUser searchByUserName(String userName) {
 		
-		String query = "SELECT * FROM users WHERE username like ?";
+		String query = "SELECT * FROM users WHERE username = ?";
 		
 		//SQL実行
 		List<Map<String, Object>> list = jdbc.queryForList(query, userName);
